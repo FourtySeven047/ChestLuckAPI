@@ -1,11 +1,11 @@
-package minevalley.chestluck.api.core;
+package eu.minevalley.chestluck.api.core;
 
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
 
 @SuppressWarnings("unused")
-public interface Closeable extends Lockable<Closeable> {
+public interface Closeable<T> extends Lockable<Closeable<T>> {
 
     /**
      * Checks whether the Closeable should automatically close after it has been opened
@@ -23,7 +23,7 @@ public interface Closeable extends Lockable<Closeable> {
      */
     @Nonnull
     @Contract("_ -> this")
-    Closeable setAutoClose(boolean autoClose);
+    Closeable<T> setAutoClose(boolean autoClose);
 
     /**
      * Checks whether the Closeable will automatically open for registrants.

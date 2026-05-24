@@ -1,4 +1,4 @@
-package minevalley.chestluck.api.core;
+package eu.minevalley.chestluck.api.core;
 
 import org.jetbrains.annotations.Contract;
 

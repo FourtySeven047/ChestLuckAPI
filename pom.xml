@@ -16,7 +16,7 @@
         <maven.compiler.target>21</maven.compiler.target>
     </properties>
 
-    <groupId>minevalley.chestluck</groupId>
+    <groupId>eu.minevalley.chestluck</groupId>
     <artifactId>api</artifactId>
     <version>${version}</version>
     <packaging>jar</packaging>

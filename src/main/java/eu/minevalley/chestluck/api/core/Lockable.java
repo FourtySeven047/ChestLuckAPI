@@ -1,4 +1,4 @@
-package minevalley.chestluck.api.core;
+package eu.minevalley.chestluck.api.core;
 
 import minevalley.core.api.Registrant;
 import org.bukkit.block.Block;

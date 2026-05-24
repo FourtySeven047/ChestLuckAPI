@@ -1,6 +1,6 @@
-package minevalley.chestluck.api;
+package eu.minevalley.chestluck.api;
 
-import minevalley.chestluck.api.core.Lockable;
+import eu.minevalley.chestluck.api.core.Lockable;
 import minevalley.core.api.Registrant;
 import org.bukkit.block.Block;
 
