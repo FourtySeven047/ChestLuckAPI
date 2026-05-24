@@ -96,9 +96,9 @@
     <dependencies>
         <!-- CoreAPI -->
         <dependency>
-            <groupId>minevalley.core</groupId>
-            <artifactId>api</artifactId>
-            <version>1.305.8</version>
+            <groupId>eu.minevalley</groupId>
+            <artifactId>core-api</artifactId>
+            <version>1.307.9</version>
         </dependency>
 
         <!-- Paper -->
