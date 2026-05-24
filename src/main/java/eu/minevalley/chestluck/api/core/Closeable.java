@@ -5,7 +5,7 @@ import org.jetbrains.annotations.Contract;
 import javax.annotation.Nonnull;
 
 @SuppressWarnings("unused")
-public interface Closeable<T> extends Lockable<Closeable<T>> {
+public interface Closeable extends Lockable<Closeable> {
 
     /**
      * Checks whether the Closeable should automatically close after it has been opened
@@ -23,7 +23,7 @@ public interface Closeable<T> extends Lockable<Closeable<T>> {
      */
     @Nonnull
     @Contract("_ -> this")
-    Closeable<T> setAutoClose(boolean autoClose);
+    Closeable setAutoClose(boolean autoClose);
 
     /**
      * Checks whether the Closeable will automatically open for registrants.
