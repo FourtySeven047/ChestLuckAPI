@@ -1,7 +1,7 @@
 package eu.minevalley.chestluck.api;
 
 import eu.minevalley.chestluck.api.core.Lockable;
-import minevalley.core.api.Registrant;
+import eu.minevalley.proxima.api.Registrant;
 import org.bukkit.block.Block;
 import org.jetbrains.annotations.ApiStatus;
 

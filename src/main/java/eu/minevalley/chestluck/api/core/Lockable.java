@@ -1,6 +1,6 @@
 package eu.minevalley.chestluck.api.core;
 
-import minevalley.core.api.Registrant;
+import eu.minevalley.proxima.api.Registrant;
 import org.bukkit.block.Block;
 import org.jetbrains.annotations.Contract;
 
