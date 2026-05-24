@@ -99,6 +99,7 @@
             <groupId>eu.minevalley</groupId>
             <artifactId>core-api</artifactId>
             <version>1.307.9</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Paper -->
