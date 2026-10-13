@@ -1,4 +1,4 @@
-package eu.minevalley.chestluck.api.core;
+package eu.minevalley.chestluck.api.core.locking;
 
 import eu.minevalley.proxima.api.Registrant;
 import org.bukkit.block.Block;
