@@ -7,6 +7,7 @@ import org.jetbrains.annotations.Contract;
 import javax.annotation.Nonnull;
 import java.time.Instant;
 
+@SuppressWarnings("unused")
 public interface LogEntry {
 
     /**
