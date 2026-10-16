@@ -1,11 +1,15 @@
 package eu.minevalley.chestluck.api;
 
 import eu.minevalley.chestluck.api.core.locking.Lockable;
+import eu.minevalley.chestluck.api.core.logging.LogEntry;
+import eu.minevalley.chestluck.api.core.logging.LogQuery;
 import eu.minevalley.proxima.api.Registrant;
 import org.bukkit.block.Block;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 @SuppressWarnings({"unused", "UnusedReturnValue"})
 public class ChestLuck {
@@ -36,5 +40,26 @@ public class ChestLuck {
     @Nullable
     public static Lockable<? extends Lockable<?>> getLockableAt(@Nonnull Block block) throws IllegalArgumentException {
         return provider.getLockableAt(block);
+    }
+
+    /**
+     * Gets all log entries matching the given query, newest first.
+     *
+     * @param query the query to filter by
+     * @return a future completing with the matching log entries
+     */
+    @Nonnull
+    public static <T extends LogEntry> CompletableFuture<List<T>> getLogs(@Nonnull LogQuery<T> query) {
+        return provider.getLogs(query);
+    }
+
+    /**
+     * Logs the given entry. The entry is persisted asynchronously.
+     *
+     * @param entry the entry to log
+     * @throws IllegalArgumentException if the entry is null
+     */
+    public static void log(@Nonnull LogEntry entry) throws IllegalArgumentException {
+        provider.log(entry);
     }
 }
