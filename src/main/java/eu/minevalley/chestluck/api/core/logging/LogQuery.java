@@ -31,6 +31,12 @@ public final class LogQuery<T extends LogEntry> {
         return new LogQuery<>(type);
     }
 
+    /**
+     * Query for a specific user. If not set, all users will be queried.
+     *
+     * @param user the user to query for
+     * @return this
+     */
     @Nonnull
     @Contract("_ -> this")
     public LogQuery<T> user(@Nonnull User user) {
@@ -38,6 +44,12 @@ public final class LogQuery<T extends LogEntry> {
         return this;
     }
 
+    /**
+     * Query for a specific block. If not set, all blocks will be queried.
+     *
+     * @param block the block to query for
+     * @return this
+     */
     @Nonnull
     @Contract("_ -> this")
     public LogQuery<T> at(@Nonnull Block block) {
@@ -45,6 +57,12 @@ public final class LogQuery<T extends LogEntry> {
         return this;
     }
 
+    /**
+     * Limit the query to logs since the given timestamp. If not set, all logs will be queried.
+     *
+     * @param from the timestamp to query from
+     * @return this
+     */
     @Nonnull
     @Contract("_ -> this")
     public LogQuery<T> since(@Nonnull Instant from) {
@@ -52,6 +70,12 @@ public final class LogQuery<T extends LogEntry> {
         return this;
     }
 
+    /**
+     * Limit the query to logs until the given timestamp. If not set, all logs will be queried.
+     *
+     * @param to the timestamp to query until
+     * @return this
+     */
     @Nonnull
     @Contract("_ -> this")
     public LogQuery<T> until(@Nonnull Instant to) {
@@ -59,6 +83,12 @@ public final class LogQuery<T extends LogEntry> {
         return this;
     }
 
+    /**
+     * Limit the amount of logs to be queried. If not set, the default limit is 100. Set to 0 for no limit.
+     *
+     * @param limit the limit amount
+     * @return this
+     */
     @Nonnull
     @Contract("_ -> this")
     public LogQuery<T> limit(int limit) {
