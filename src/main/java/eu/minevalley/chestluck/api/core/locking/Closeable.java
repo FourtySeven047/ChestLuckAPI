@@ -1,4 +1,4 @@
-package eu.minevalley.chestluck.api.core;
+package eu.minevalley.chestluck.api.core.locking;
 
 import org.jetbrains.annotations.Contract;
 
