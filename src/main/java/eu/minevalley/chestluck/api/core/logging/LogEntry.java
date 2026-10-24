@@ -5,6 +5,7 @@ import org.bukkit.block.Block;
 import org.jetbrains.annotations.Contract;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.time.Instant;
 
 @SuppressWarnings("unused")
@@ -31,9 +32,13 @@ public sealed interface LogEntry permits BlockActionLog, InteractionLog, Invento
     /**
      * Gets the user associated with this log entry
      *
+     * <p>
+     * This value is null for block-to-block transactions, where no direct user is involved.
+     * </p>
+     *
      * @return user associated with this log entry
      */
-    @Nonnull
+    @Nullable
     @Contract(pure = true)
     User user();
 

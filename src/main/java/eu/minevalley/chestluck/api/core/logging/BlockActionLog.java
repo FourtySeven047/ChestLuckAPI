@@ -5,11 +5,12 @@ import org.bukkit.Material;
 import org.bukkit.block.Block;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.time.Instant;
 
 @SuppressWarnings("unused")
 public record BlockActionLog(
-        @Nonnull Block block, @Nonnull User user, @Nonnull String description, @Nonnull Instant timestamp,
+        @Nonnull Block block, @Nullable User user, @Nonnull String description, @Nonnull Instant timestamp,
         @Nonnull Action action, @Nonnull Material material) implements LogEntry {
 
     public enum Action {PLACE, BREAK}
